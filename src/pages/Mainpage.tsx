@@ -2,13 +2,15 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { FaRegFilePdf } from 'react-icons/fa'
 import { TbFolderSearch } from 'react-icons/tb'
+import Header from '../components/Header'
 
 const Wrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 7%;
+  height: 100dvh;
+  background-color: #f7f7f7;
 `
 const Title = styled.div`
   display: flex;
@@ -112,22 +114,25 @@ function MainPage() {
   }
 
   return (
-    <Wrap>
-      <Title>Project</Title>
-      <Container>
-        <UploadArea>
-          <FileInput type="file" onChange={handleFileChange} />
-          <FaRegFilePdf size="50px" color="white" />
-          <InstructionText>드롭 파일을 여기로 끌어 놓으세요</InstructionText>
-          {selectedFile && <FileInfo>{selectedFile.name}</FileInfo>}
-          <SearchWrap onClick={handleIconClick}>
-            <StyledIcon size="20px" />
-            파일선택
-          </SearchWrap>
-        </UploadArea>
-        <Submit>퀴즈생성</Submit>
-      </Container>
-    </Wrap>
+    <>
+      <Header />
+      <Wrap>
+        <Title>PDF TO QUIZ</Title>
+        <Container>
+          <UploadArea>
+            <FileInput type="file" onChange={handleFileChange} />
+            <FaRegFilePdf size="50px" color="white" />
+            <InstructionText>드롭 파일을 여기로 끌어 놓으세요</InstructionText>
+            {selectedFile && <FileInfo>{selectedFile.name}</FileInfo>}
+            <SearchWrap onClick={handleIconClick}>
+              <StyledIcon size="20px" />
+              파일선택
+            </SearchWrap>
+          </UploadArea>
+          <Submit>퀴즈생성</Submit>
+        </Container>
+      </Wrap>
+    </>
   )
 }
 

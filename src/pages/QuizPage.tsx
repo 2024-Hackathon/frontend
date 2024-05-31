@@ -7,10 +7,11 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #f7f7f7;
 `
 
 const QuizContainer = styled.div`
-  background-color: #8080f0;
+  background-color: #1a63ad;
   border-radius: 10px;
   padding: 2rem;
   width: 80%;
@@ -55,7 +56,9 @@ const SubmitButton = styled.button`
   border-radius: 5px;
   cursor: pointer;
   align-self: flex-end;
-  margin: 20px;
+  margin: 80px;
+  margin-top: 40px;
+  font-weight: bold;
 
   &:hover {
     background-color: #45a049;
@@ -137,7 +140,7 @@ function QuizPage() {
             ))}
           </QuizContainer>
         ))}
-        <SubmitButton onClick={handleSubmit}>Submit</SubmitButton>
+        <SubmitButton onClick={handleSubmit}>답안 제출</SubmitButton>
       </Container>
     </div>
   )
