@@ -16,11 +16,11 @@ const Wrap = styled.div`
   padding-left: 8.75rem;
   padding-right: 8.75rem;
   margin-bottom: 3rem;
-  border: 1px solid black;
+  border-bottom: 1px solid #bfbfbf;
 `
 
 const Logo = styled.img`
-  width: 8rem;
+  width: 5rem;
   cursor: pointer;
 `
 
